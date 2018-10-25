@@ -1,0 +1,12 @@
+$png-{{spritesheet.name}}: (
+  name: 'png-{{spritesheet.name}}',
+  image: '~{{spritesheet.escaped_image}}',
+  width: {{spritesheet.px.width}},
+  height: {{spritesheet.px.height}},
+  ratio: {{ratio}},
+  sprites: (
+    {{#each sprites}}
+    {{strings.name}}: ({{strings.bare_offset_x}}: {{px.offset_x}}, {{strings.bare_offset_y}}: {{px.offset_y}}, {{strings.bare_width}}: {{px.width}}, {{strings.bare_height}}: {{px.height}}),
+    {{/each}}
+  )
+);

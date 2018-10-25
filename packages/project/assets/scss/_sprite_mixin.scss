@@ -1,0 +1,33 @@
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@mixin png-sprite($file-name, $sprite-map, $property: (set-offset-x: 0, set-offset-y: 0)) {
+  $ratio: map-get($sprite-map, ratio);
+  $offset-x: map-deep-get($sprite-map, 'sprites', $file-name, 'offset-x') / $ratio;
+  $offset-y: map-deep-get($sprite-map, 'sprites', $file-name, 'offset-y') / $ratio;
+  $set-offset-x: if(map-get($property, 'set-offset-x'), map-get($property, 'set-offset-x'), 0);
+  $set-offset-y: if(map-get($property, 'set-offset-y'), map-get($property, 'set-offset-y'), 0);
+
+  width: ceil(map-deep-get($sprite-map, 'sprites', $file-name, 'width') / $ratio);
+  height: ceil(map-deep-get($sprite-map, 'sprites', $file-name, 'height') / $ratio);
+
+  $image: map-get($sprite-map, image);
+
+  background-image: url($image);
+  background-size: ceil(map-get($sprite-map, width) / $ratio) ceil(map-get($sprite-map, height) / $ratio);
+  background-position: floor($offset-x + $set-offset-x) floor($offset-y + $set-offset-y);
+}
+
+// Todo: SCSS는 다이나믹 변수 및 믹스인이 지원 안되고, svg-sprite 모듈에서 handlebars 템플릿을 지원 안하기 때문에 더이상 고도화가 안됨.
+@mixin svg-sprite($file-name, $map-name, $map-size) {
+  $image: map-get($map-name, $file-name);
+
+  width: map-deep-get($map-size, $file-name, 'width');
+  height: map-deep-get($map-size, $file-name, 'height');
+  background-image: url($image);
+  background-repeat: no-repeat;
+}

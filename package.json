@@ -1,0 +1,50 @@
+{
+  "name": "vue-nuxt-boilerplate",
+  "description": "vue2, nuxt2, webpack4, scss, sprite(png/svg), i18n, axios, rx, api-query, validator...",
+  "version": "1.0.0",
+  "homepage": "https://github.com/GronkOut/vue-nuxt-boilerplate",
+  "author": {
+    "name": "Byung Cheol, Song",
+    "email": "gronkout@gmail.com",
+    "url": "https://github.com/GronkOut/vue-nuxt-boilerplate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GronkOut/vue-nuxt-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GronkOut/vue-nuxt-boilerplate/issues"
+  },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "workspace",
+    "webpack",
+    "sprite",
+    "spritesmith",
+    "i18n",
+    "axios",
+    "rx",
+    "api-query",
+    "validator"
+  ],
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "project:pc:dev": "yarn workspace project pc:dev",
+    "project:mobile:dev": "yarn workspace project mobile:dev",
+    "project:build": "yarn workspace project build",
+    "project:start": "yarn workspace project start",
+    "project:generate": "yarn workspace project generate",
+    "project:lint": "yarn workspace project lint",
+    "project:lintfix": "yarn workspace project lintfix",
+    "project:precommit": "yarn workspace project precommit"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "yarn": "^1.9.4"
+  },
+  "license": "MIT"
+}

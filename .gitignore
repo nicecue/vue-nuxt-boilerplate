@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# lock
+package-lock.json
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Sprite
+**/scss/sprite/**/*
+**/static/img/sprite/**/*
+
+# ETC
+.idea
+.vscode
+.DS_Store

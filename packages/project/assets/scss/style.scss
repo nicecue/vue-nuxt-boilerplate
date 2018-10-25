@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "utils";
+@import "mixins";
+
+/* Todo: 임시 스타일 */
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+.main {
+  background-color: #eee;
+}
+.button {
+  background-color: red;
+  color: #fff;
+}
