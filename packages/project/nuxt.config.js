@@ -71,6 +71,7 @@ module.exports = {
     '~/plugins/vue-rx.js',
     '~/plugins/vue-api-query',
     '~/plugins/vue-validator.js',
+    '~/plugins/vue-persistedstate.js',
     {src: '~plugins/vue-i18n.js', injectAs: 'i18n'}
   ]
 }
