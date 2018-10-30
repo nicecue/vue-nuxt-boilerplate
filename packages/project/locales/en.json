@@ -1,6 +1,14 @@
 {
-  "language": {
+  "header": {
     "korean": "Korean",
     "english": "English"
+  },
+  "content": {
+    "image": "Image",
+    "vue": "Vue",
+    "nuxt": "Nuxt"
+  },
+  "footer": {
+    "copyright": "Copyright"
   }
 }

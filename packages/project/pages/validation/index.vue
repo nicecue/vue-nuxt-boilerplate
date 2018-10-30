@@ -40,7 +40,7 @@
 
 export default {
   name: 'Validation',
-  data: function () {
+  data () {
     return {
       name: '',
       gender: '',

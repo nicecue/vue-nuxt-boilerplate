@@ -3,18 +3,14 @@
     <h2>Vuex</h2>
     <p>{{ $store.state.counter.count | thousandSeparator }}</p>
 
-    <h2>Image</h2>
+    <h2>{{ $t('content.image') }}</h2>
     <p class="cover">
       <img src="/img/nuxt-views-schema_800x400.png" width="400" height="200" alt="임시 이미지">
     </p>
-
-    <h2>Locale</h2>
-    <p>{{ $t('language.korean') }}</p>
   </section>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import { thousandSeparator } from '~/filters'
 
 export default {
