@@ -67,11 +67,12 @@ module.exports = {
     ]
   },
   plugins: [
+    // 위에서부터 순서대로 로딩
     // Todo: 전역 사용이 불필요한 플러그인 분리
+    {src: '~/plugins/vue-persistedstate.js', ssr: false },
+    {src: '~plugins/vue-i18n.js', injectAs: 'i18n'},
     '~/plugins/vue-rx.js',
     '~/plugins/vue-api-query',
-    '~/plugins/vue-validator.js',
-    '~/plugins/vue-persistedstate.js',
-    {src: '~plugins/vue-i18n.js', injectAs: 'i18n'}
+    '~/plugins/vue-validator.js'
   ]
 }
